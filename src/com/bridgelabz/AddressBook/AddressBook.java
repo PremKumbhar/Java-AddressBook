@@ -1,53 +1,68 @@
 package com.bridgelabz.AddressBook;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 class info 
 {
-// Method Creation
-	void firstname(String firstname)
+	void dataAdd() 
 	{
-		System.out.println("First name:" +firstname);
+		// Scanner to take user input
+		Scanner scanner = new Scanner(System.in); 
+		{
+			ArrayList<String> contacts = new ArrayList<String>();
+			
+			System.out.println("Enter First Name:");
+			String firstname = scanner.nextLine();
+			contacts.add(firstname);
+			
+			System.out.println("Enter Last Name:");
+			String lastname = scanner.nextLine();
+			contacts.add(lastname);
+			
+			System.out.println("Enter Address:");
+			String add = scanner.nextLine();
+			contacts.add(add);
+			
+			System.out.println("Enter City:");
+			String city = scanner.nextLine();
+			contacts.add(city);
+			
+			System.out.println("Enter State:");
+			String state = scanner.nextLine();
+			contacts.add(state);
+			
+			System.out.println("Enter Zip Code:");
+			String zip = scanner.nextLine();
+			contacts.add(zip);
+			
+			System.out.println("Enter Phone Number:");
+			String phoneno = scanner.nextLine();
+			contacts.add(phoneno);
+			
+			System.out.println("Enter Email Address:");
+			String email = scanner.nextLine();
+			contacts.add(email);
+			
+			// Display a array list
+			System.out.println("Contact Added");
+			System.out.println(contacts);
+		}	
 	}
-	void lastname(String lastname)
-	{
-		System.out.println("Last name:" +lastname);
-	}
-	void city(String city)
-	{
-		System.out.println("City:" +city);
-	}
-	void state(String state)
-	{
-		System.out.println("State:" +state);
-	}
-	void zip(long zip)
-	{
-		System.out.println("Zip Code:" +zip);
-	}
-	void number(long num)
-	{
-		System.out.println("Number:" +num);
-	}
-	void email(String email)
-	{
-		System.out.println("Email:" +email);
-	}
+
 }
 
-public class AddressBook {
+public class AddressBook 
+{
 
 	public static void main(String[] args) 
 	{
 	System.out.println("Welcome to address book program");
-	info a1 = new info();
+	System.out.println("PhoneBook");
+	// Creating Object
+	info person1 = new info();
+	// Calling method
+	person1.dataAdd();
 	
-	// Methode Calling
-	a1.firstname("Sushant");
-	a1.lastname("Singh");
-	a1.city("Pune");
-	a1.state("Maharastra");
-	a1.zip(410014);
-	a1.number(735044778);
-	a1.email("sushantsingh@gmail.com");
 	}
-
 }
