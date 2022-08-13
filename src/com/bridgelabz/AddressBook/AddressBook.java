@@ -52,7 +52,9 @@ class info
 			String firstname1 = scanner.nextLine();
 			
 			if(firstname1.equals(firstname)) {
-				dataAdd();
+				contacts.removeAll(contacts);
+				System.out.println(contacts);
+				System.out.println("Empty Address Book" + contacts);
 			} else {
 				System.out.println("No contact exists by this name..! Please try again");
 			}
