@@ -47,6 +47,15 @@ class info
 			// Display a array list
 			System.out.println("Contact Added");
 			System.out.println(contacts);
+			
+			System.out.println("Enter the first name of contact you want to edit :");
+			String firstname1 = scanner.nextLine();
+			
+			if(firstname1.equals(firstname)) {
+				dataAdd();
+			} else {
+				System.out.println("No contact exists by this name..! Please try again");
+			}
 		}	
 	}
 
